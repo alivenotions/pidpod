@@ -1,0 +1,33 @@
+{
+  "name": "pidpod",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "precommit": "lint-staged",
+    "test:staged": "cross-env CI=true react-scripts test --findRelatedTests",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "cross-env CI=true react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,css}": [
+      "prettier --single-quote --no-semi --trailing-comma es5 --write",
+      "git add"
+    ],
+    "*.js": [
+      "npm run test:staged -- "
+    ]
+  },
+  "dependencies": {
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-scripts": "1.1.4"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.0",
+    "prettier": "^1.13.5"
+  }
+}
