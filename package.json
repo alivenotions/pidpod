@@ -4,7 +4,6 @@
   "private": true,
   "scripts": {
     "precommit": "lint-staged",
-    "test:staged": "cross-env CI=true react-scripts test --findRelatedTests",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "cross-env CI=true react-scripts test",
@@ -14,9 +13,6 @@
     "src/**/*.{js,jsx,json,css}": [
       "prettier --single-quote --no-semi --trailing-comma es5 --write",
       "git add"
-    ],
-    "*.js": [
-      "npm run test:staged -- "
     ]
   },
   "dependencies": {
