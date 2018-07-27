@@ -2,6 +2,7 @@
   "name": "pidpod",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://alivenotions.github.io/pidpod/",
   "scripts": {
     "precommit": "lint-staged",
     "test:staged": "cross-env CI=true react-scripts test --findRelatedTests",
