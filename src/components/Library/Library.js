@@ -1,5 +1,6 @@
+/* global RSSParser */
+import 'rss-parser/dist/rss-parser.min.js'
 import React from 'react'
-import RSSParser from 'rss-parser'
 
 import Header from './Header/Header'
 
@@ -20,7 +21,7 @@ class Library extends React.Component {
         this.setState({ podcastFeeds: [...this.state.podcastFeeds, feed] })
       })
       // FIXME: Handle error cases
-      .catch(console.log)
+      .catch()
   }
 
   render() {

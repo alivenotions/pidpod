@@ -5,7 +5,6 @@ class Header extends React.Component {
     event.preventDefault()
     // FIXME: Create a modal instead of an input type
     const rssUrl = document.getElementById('rssUrl').value
-    console.log(rssUrl)
     this.props.addPodcast(rssUrl)
   }
 
