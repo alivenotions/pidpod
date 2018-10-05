@@ -4,7 +4,7 @@ class Header extends React.Component {
   addPodcast = event => {
     event.preventDefault()
     // FIXME: Create a modal instead of an input type
-    const rssUrl = document.getElementById('rssUrl').value
+    const rssUrl = this.rssUrlField.value
     this.props.addPodcast(rssUrl)
   }
 
@@ -13,7 +13,7 @@ class Header extends React.Component {
       <header>
         <h1>{this.props.heading}</h1>
         {/* TODO: Abstract this into a button component */}
-        <input type="text" id="rssUrl" />
+        <input type="text" ref={input => (this.rssUrlField = input)} />
         <button onClick={this.addPodcast}>Add Podcast</button>
       </header>
     )
