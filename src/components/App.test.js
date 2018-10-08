@@ -21,4 +21,14 @@ describe('<App />', () => {
     const wrapper = shallow(<App />)
     expect(wrapper.find(Library)).toHaveLength(1)
   })
+
+  it('renders correctly', () => {
+    expect(shallow(<App />)).toMatchSnapshot()
+  })
+
+  it('passes the correct rssUrl according to state', () => {
+    const wrapper = shallow(<App />)
+    wrapper.setState({ lastRSSUrl: 'mock.com/url/rss' })
+    expect(wrapper).toMatchSnapshot()
+  })
 })
