@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 
 import Header from './Header/Header'
 import Library from './Library/Library'
@@ -15,10 +15,10 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <Fragment>
         <Header title="Pidpod" addPodcast={this.setLastRSSUrl} />
-        <Library rssUrl={this.state.lastRSSUrl} />
-      </div>
+        <Library heading="My Podcasts" rssUrl={this.state.lastRSSUrl} />
+      </Fragment>
     )
   }
 }

@@ -1,17 +1,20 @@
 /* global RSSParser */
+import React, { Fragment } from 'react'
 import 'rss-parser/dist/rss-parser.min.js'
-import React from 'react'
-
-import Header from './Header/Header'
 
 class Library extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       podcastFeeds: [],
-      libraryHeading: 'Your Podcasts',
     }
     this.rssParser = new RSSParser()
+  }
+
+  componentDidUpdate = prevProps => {
+    if (this.props.rssUrl !== prevProps.rssUrl) {
+      this.addPodcastRSSFeedFromUrl(this.props.rssUrl)
+    }
   }
 
   addPodcastRSSFeedFromUrl = rssUrl => {
@@ -25,12 +28,7 @@ class Library extends React.Component {
   }
 
   render() {
-    return (
-      <Header
-        addPodcast={this.addPodcastRSSFeedFromUrl}
-        heading={this.state.libraryHeading}
-      />
-    )
+    return <Fragment>{this.props.heading}</Fragment>
   }
 }
 
