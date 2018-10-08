@@ -21,15 +21,21 @@ class Header extends Component {
     return (
       <header>
         <h1>{this.props.title}</h1>
-        <form className="add-podcast" onSubmit={this.onAddPodcastSubmit}>
+        <div className="add-podcast">
           <input
             placeholder="Add RSS Feed"
             type="text"
             value={this.state.rssUrlValue}
             onChange={this.handleRSSValueChange}
           />
-          <button>+</button>
-        </form>
+          <button
+            type="button"
+            onClick={this.onAddPodcastSubmit}
+            disabled={!this.state.rssUrlValue}
+          >
+            +
+          </button>
+        </div>
       </header>
     )
   }

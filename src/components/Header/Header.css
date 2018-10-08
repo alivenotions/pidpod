@@ -38,6 +38,14 @@ header button:active {
   background: linear-gradient(45deg, #c4c4c4 25%, #dde0dd);
 }
 
+header button:disabled {
+  background: #bebebe;
+  opacity: 0.7;
+  cursor: default;
+  color: #807f7f;
+  box-shadow: 0 0 0;
+}
+
 header input {
   font-size: 1em;
   /* width: 0; */
