@@ -1,6 +1,7 @@
 /* global RSSParser */
 import React, { Fragment } from 'react'
 import 'rss-parser/dist/rss-parser.min.js'
+import Title from './Title/Title.js'
 
 class Library extends React.Component {
   constructor(props) {
@@ -28,7 +29,11 @@ class Library extends React.Component {
   }
 
   render() {
-    return <Fragment>{this.props.heading}</Fragment>
+    return (
+      <Fragment>
+        <Title title={this.props.heading} />
+      </Fragment>
+    )
   }
 }
 

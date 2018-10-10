@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Title /> renders correctly 1`] = `
+<Heading>
+   
+  My Podcasts
+   
+</Heading>
+`;
+
+exports[`<Title /> renders the styled Heading correctly 1`] = `
+<Heading>
+   
+  Podcasts
+   
+</Heading>
+`;
