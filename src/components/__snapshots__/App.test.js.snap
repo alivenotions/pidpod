@@ -10,6 +10,30 @@ exports[`<App /> passes the correct rssUrl according to state 1`] = `
     heading="My Podcasts"
     rssUrl="mock.com/url/rss"
   />
+  <ToastContainer
+    autoClose={5000}
+    bodyClassName={null}
+    className={null}
+    closeButton={
+      <CloseButton
+        ariaLabel="close"
+      />
+    }
+    closeOnClick={true}
+    draggable={true}
+    draggablePercent={80}
+    hideProgressBar={false}
+    newestOnTop={false}
+    pauseOnFocusLoss={true}
+    pauseOnHover={true}
+    position="top-right"
+    progressClassName={null}
+    progressStyle={null}
+    rtl={false}
+    style={null}
+    toastClassName={null}
+    transition={[Function]}
+  />
 </Fragment>
 `;
 
@@ -22,6 +46,30 @@ exports[`<App /> renders correctly 1`] = `
   <Library
     heading="My Podcasts"
     rssUrl=""
+  />
+  <ToastContainer
+    autoClose={5000}
+    bodyClassName={null}
+    className={null}
+    closeButton={
+      <CloseButton
+        ariaLabel="close"
+      />
+    }
+    closeOnClick={true}
+    draggable={true}
+    draggablePercent={80}
+    hideProgressBar={false}
+    newestOnTop={false}
+    pauseOnFocusLoss={true}
+    pauseOnHover={true}
+    position="top-right"
+    progressClassName={null}
+    progressStyle={null}
+    rtl={false}
+    style={null}
+    toastClassName={null}
+    transition={[Function]}
   />
 </Fragment>
 `;
