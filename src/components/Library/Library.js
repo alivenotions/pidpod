@@ -1,6 +1,6 @@
-/* global RSSParser */
 import React, { Fragment } from 'react'
-import 'rss-parser/dist/rss-parser.min.js'
+import { notify, notifyError } from '../../utils/toastNotifs'
+import { getRSSParser } from '../../utils/rssParser'
 
 class Library extends React.Component {
   constructor(props) {
@@ -8,7 +8,6 @@ class Library extends React.Component {
     this.state = {
       podcastFeeds: [],
     }
-    this.rssParser = new RSSParser()
   }
 
   componentDidUpdate = prevProps => {
@@ -18,13 +17,13 @@ class Library extends React.Component {
   }
 
   addPodcastRSSFeedFromUrl = rssUrl => {
-    this.rssParser
+    getRSSParser()
       .parseURL(rssUrl)
       .then(feed => {
         this.setState({ podcastFeeds: [...this.state.podcastFeeds, feed] })
+        notify('Successfully added the podcast to Library')
       })
-      // FIXME: Handle error cases
-      .catch()
+      .catch(_ => notifyError('The URL seems to be wrong!'))
   }
 
   render() {
