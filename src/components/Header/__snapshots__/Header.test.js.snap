@@ -1,51 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Header /> renders correctly 1`] = `
-<header>
-  <h1>
+<HeaderBody>
+  <HeaderTitle>
     PidPod
-  </h1>
-  <div
-    className="add-podcast"
-  >
-    <input
+  </HeaderTitle>
+  <AddPodcast>
+    <Input
       onChange={[Function]}
       placeholder="Add RSS Feed"
       type="text"
       value=""
     />
-    <button
+    <Button
       disabled={true}
       onClick={[Function]}
       type="button"
     >
       +
-    </button>
-  </div>
-</header>
+    </Button>
+  </AddPodcast>
+</HeaderBody>
 `;
 
 exports[`<Header /> should call the prop function with input state on button click 1`] = `
-<header>
-  <h1>
+<HeaderBody>
+  <HeaderTitle>
     PidPod
-  </h1>
-  <div
-    className="add-podcast"
-  >
-    <input
+  </HeaderTitle>
+  <AddPodcast>
+    <Input
       onChange={[Function]}
       placeholder="Add RSS Feed"
       type="text"
       value="mockRss.com/value/rss"
     />
-    <button
+    <Button
       disabled={false}
       onClick={[Function]}
       type="button"
     >
       +
-    </button>
-  </div>
-</header>
+    </Button>
+  </AddPodcast>
+</HeaderBody>
 `;
