@@ -49,11 +49,6 @@ const Input = styled.input`
   padding: 0.4em;
   margin: 0 0.5em;
 `
-HeaderBody.displayName = 'HeaderBody'
-HeaderTitle.displayName = 'HeaderTitle'
-AddPodcast.displayName = 'AddPodcast'
-Input.displayName = 'Input'
-Button.displayName = 'Button'
 class Header extends Component {
   state = {
     rssUrlValue: '',

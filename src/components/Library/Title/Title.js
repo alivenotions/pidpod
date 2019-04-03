@@ -13,7 +13,6 @@ const Heading = styled.h1`
   margin-left: 17%;
   overflow: auto;
 `
-Heading.displayName = 'Heading'
 class Title extends React.Component {
   render() {
     return <Heading> {this.props.title} </Heading>
